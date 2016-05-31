@@ -1,0 +1,8 @@
+# AppleVolumes.default
+# Managed by Puppet - DO NOT EDIT BY HAND
+
+:DEFAULT: options:upriv,usedots
+
+/mnt/storage/rob/backups/timemachine "Rob's Time Machine" options:tm volsizelimit:1000000 allow:rob allowed_hosts:192.168.1.1/16
+
+/mnt/storage/julie/backups/timemachine "Julie's Time Machine" options:tm volsizelimit:1000000 allow:julie allowed_hosts:192.168.1.1/16

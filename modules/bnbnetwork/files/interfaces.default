@@ -1,0 +1,9 @@
+# /etc/network/interfaces (default)
+# Managed by Puppet - DO NOT EDIT BY HAND
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+iface eth0 inet dhcp

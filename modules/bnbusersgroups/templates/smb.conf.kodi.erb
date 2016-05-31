@@ -1,0 +1,15 @@
+<%# smb.conf.kodi.erb %>
+# smb.conf.<%= @kodiuser %>
+# Managed by Puppet - DO NOT EDIT BY HAND
+
+[<%= @kodiuser %>]
+  browseable     = yes
+  comment        = Home folder for <%= @kodiuser %> (Samba %v on %L)
+  create mask    = 0644
+  directory mask = 0755
+  force group    = <%= @kodigroup %>
+  force user     = <%= @kodiuser %>
+  path           = <%= @kodihome %>
+  valid users    = <%= @kodiuser %>
+  writeable      = yes
+  write list     = <%= @kodiuser %>

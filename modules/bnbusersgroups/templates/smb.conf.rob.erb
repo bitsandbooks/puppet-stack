@@ -1,0 +1,15 @@
+<%# smb.conf.rob.erb %>
+# smb.conf.<%= @robuser %>
+# Managed by Puppet - DO NOT EDIT BY HAND
+
+[<%= @robuser %>]
+  browseable     = yes
+  comment        = Home folder for <%= @robuser %> (Samba %v on %L)
+  create mask    = 0644
+  directory mask = 0755
+  force group    = <%= @robgroup %>
+  force user     = <%= @robuser %>
+  path           = <%= @robhome %>
+  valid users    = <%= @robuser %>
+  writeable      = yes
+  write list     = <%= @robuser %>
